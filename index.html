@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>black macOS - portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--card:#151515;--card2:#1e1e1e;--border:#2a2a2a;--white:#f5f5f5;--gray:#9a9a9a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--white);font-family:Poppins,sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 0%, #ffffff15 1px, transparent 1px);background-size:28px 28px;pointer-events:none}
+.skull{position:fixed;top:-10%;font-size:22px;animation:fall linear forwards;pointer-events:none;z-index:9999;filter:drop-shadow(0 0 6px #ffffff55)}
+@keyframes fall{to{transform:translateY(115vh) rotate(540deg)}}
+
+.topbar{position:fixed;top:0;width:100%;height:28px;background:rgba(20,20,20,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:0 14px;font-size:11px;z-index:20}
+.topbar b{letter-spacing:.5px}
+
+.container{max-width:1100px;margin:60px auto 110px;padding:0 14px;display:grid;gap:18px}
+.window{background:linear-gradient(to bottom, var(--card), var(--card2));border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px #000000aa;animation:pop .6s ease both}
+@keyframes pop{from{transform:translateY(20px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.win-head{height:38px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#111;border-bottom:1px solid var(--border);cursor:grab}
+.dot{width:11px;height:11px;border-radius:50%}
+.win-body{padding:22px}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center}
+.hero h1{font-family:Instrument Serif;font-size:clamp(32px,6vw,58px);line-height:.9}
+.hero h1 i{color:var(--gray);font-weight:400}
+.tag{display:inline-block;border:1px solid var(--border);padding:5px 12px;border-radius:999px;font-size:11px;margin-bottom:12px;background:#ffffff0d}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#0f0f0f;border:1px solid var(--border);border-radius:12px;padding:14px;transition:.3s}
+.card:hover{border-color:#fff3;transform:translateY(-2px)}
+.card h4{font-family:Instrument Serif;font-size:22px}
+.badge{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.badge span{background:#ffffff10;border:1px solid var(--border);padding:4px 10px;border-radius:999px;font-size:10px}
+
+input,textarea{width:100%;background:#0a0a0a;border:1px solid var(--border);color:white;padding:12px;border-radius:10px;outline:none;margin-bottom:10px;font-family:Poppins}
+input:focus,textarea:focus{border-color:#fff}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:white;color:black;font-weight:600;cursor:pointer;transition:.3s}
+button:hover{background:#d0d0d0}
+
+.dock{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(20,20,20,.75);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:7px 12px;display:flex;gap:10px;z-index:20;box-shadow:0 10px 40px #000}
+.dock a{width:42px;height:42px;background:#1a1a1a;border:1px solid var(--border);border-radius:11px;display:grid;place-items:center;text-decoration:none;font-size:18px;transition:.3s}
+.dock a:hover{transform:translateY(-8px) scale(1.1);background:white}
+
+@media(max-width:800px){.hero,.grid2{grid-template-columns:1fr}.dock{scale:.9}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div>💀 blackOS — portfolio.app</div><div>☠️ 100% • tasikmalaya • jum,2okt 2026</div></div>
+
+<div class="container">
+
+<div class="window" id="beranda">
+<div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><small style="margin-left:10px">beranda.app — zsh</small></div>
+<div class="win-body hero">
+<div>
+<div class="tag">💀 AVAILABLE FOR NEW PROJECT</div>
+<h1>hi, i'm <i>you</i> —<br>black designer & dev.</h1>
+<p style="margin:14px 0;opacity:.6;line-height:1.6">Portfolio tema hitam macOS. Minimal, edgy, interaktif. Full animasi tengkorak, window bisa di-drag, dan 100% responsif.</p>
+<div class="badge"><span>💀 PPLG</span><span>🖤 UI/UX</span><span>☠️ Frontend</span><span>💀 BlackOS</span></div>
+</div>
+<div style="background:#0a0a0a;border:1px solid #2a2a2a;border-radius:16px;padding:16px;text-align:center">
+<div style="background:#151515;border-radius:12px;padding:24px;border:1px solid #222">
+<div style="font-size:70px">💀</div>
+<p style="font-family:Instrument Serif;font-size:26px;margin-top:6px">you's mac</p>
+<small style="opacity:.5">BLACK EDITION • BANDUNG 2026</small>
+</div>
+</div>
+</div>
+</div>
+
+<div class="grid2">
+<div class="window" id="riwayat">
+<div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><small style="margin-left:10px">riwayat.log</small></div>
+<div class="win-body"><h3 style="font-family:Instrument Serif;font-size:26px;margin-bottom:10px">📜 riwayat</h3>
+<div class="card"><h4>2024 - Sekarang</h4><p style="opacity:.6;font-size:13px">SMK - PPLG / TJKT<br>Belajar coding, design system dark mode.</p></div>
+<div class="card" style="margin-top:10px"><h4>2023 - Freelance</h4><p style="opacity:.6;font-size:13px">Bikin portfolio, poster dark aesthetic & landing page.</p></div>
+</div>
+</div>
+
+<div class="window" id="profil">
+<div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><small style="margin-left:10px">profil.me</small></div>
+<div class="win-body"><h3 style="font-family:Instrument Serif;font-size:26px;margin-bottom:10px">🖤 profil</h3>
+<p style="opacity:.6;line-height:1.7;font-size:14px">Fokus di dark UI, clean code, dan detail kecil. Suka tema hitam, monokrom, dan vibe edgy. Hobi: ngoding malem, musik, koleksi tengkorak.</p>
+<div class="badge"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span><span>Next.js</span></div>
+</div>
+</div>
+</div>
+
+<div class="grid2">
+<div class="window" id="pengalaman">
+<div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><small style="margin-left:10px">pengalaman.app</small></div>
+<div class="win-body"><h3 style="font-family:Instrument Serif;font-size:26px;margin-bottom:10px">💀 pengalaman</h3>
+<div class="card"><h4>☠️ Blackfolio</h4><p style="opacity:.6;font-size:13px">Portfolio grid dark aesthetic</p></div>
+<div class="card" style="margin-top:10px"><h4>🖤 Dark Shop Landing</h4><p style="opacity:.6;font-size:13px">Landing page brand streetwear</p></div>
+<div class="card" style="margin-top:10px"><h4>💀 BlackOS Portfolio</h4><p style="opacity:.6;font-size:13px">Tema macOS hitam ini</p></div>
+</div>
+</div>
+
+<div class="window" id="kontak">
+<div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><small style="margin-left:10px">kontak.mail</small></div>
+<div class="win-body"><h3 style="font-family:Instrument Serif;font-size:26px;margin-bottom:10px">💌 kontak</h3>
+<input placeholder="nama kamu">
+<input placeholder="email / wa">
+<textarea rows="3" placeholder="pesan..."></textarea>
+<button onclick="alert('pesan terkirim 💀🖤')">kirim 💀</button>
+<p style="font-size:10px;text-align:center;margin-top:10px;opacity:.4">bandung • ig: @you.black • hi@black.id</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="dock">
+<a href="#beranda">🏠</a>
+<a href="#riwayat">📜</a>
+<a href="#profil">🖤</a>
+<a href="#pengalaman">💀</a>
+<a href="#kontak">💌</a>
+</div>
+
+<script>
+// animasi tengkorak
+const skulls=['💀','☠️','🖤','💀','☠️'];
+setInterval(()=>{
+let e=document.createElement('div');e.className='skull';e.innerText=skulls[Math.floor(Math.random()*skulls.length)];
+e.style.left=Math.random()*100+'vw';e.style.animationDuration=(3+Math.random()*4)+'s';
+e.style.fontSize=(16+Math.random()*22)+'px';
+document.body.appendChild(e);setTimeout(()=>e.remove(),6000);
+},220);
+
+// drag window
+document.querySelectorAll('.window').forEach(win=>{
+let h=win.querySelector('.win-head'), down=false, sx, sy;
+h.addEventListener('mousedown',ev=>{down=true;sx=ev.clientX;sy=ev.clientY;win.style.position='relative';win.style.zIndex=99});
+window.addEventListener('mousemove',ev=>{if(!down)return;win.style.left=(ev.clientX-sx)+'px';win.style.top=(ev.clientY-sy)+'px'});
+window.addEventListener('mouseup',()=>{down=false;win.style.zIndex=1});
+});
+</script>
+</body>
+</html>
